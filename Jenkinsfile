@@ -1,8 +1,8 @@
 node {
     stage('buildImage'){
-        openshiftBuild(buildConfig: 'ruby-ex', showBuildLogs: 'true')
+        openshiftBuild(buildConfig: 'pili-sample-app', showBuildLogs: 'true')
     }
     stage('deployApplication'){
-        openshiftDeploy(deploymentConfig: 'ruby-ex')
+        openshiftDeploy(deploymentConfig: 'pili-sample-app')
     }
 }
